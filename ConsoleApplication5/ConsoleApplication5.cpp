@@ -39,7 +39,7 @@ using VirtualFn1_t = void(__thiscall*)(void* thisptr); /*Creates a type called V
 				                       takes a void* parameter (which is the "this" pointer to a class instance). This is a template for a 
 						       function of the same type as our virtual function (VirtualFn1) that we wish to hook.
 
-													   Alternative typedef syntax:    typedef void(__thiscall* VirtualFn1_t)(void* thisptr);*/
+						       Alternative typedef syntax:    typedef void(__thiscall* VirtualFn1_t)(void* thisptr);*/
 
 VirtualFn1_t orig_VirtualFn1; /*Creates a variable (orig_VirtualFn1) of type VirtualFn1_t. This will be used later to store the address of the original
 	                      VirtualFn1 function before we hook it, allowing us to keep accessing it after the hook.*/
